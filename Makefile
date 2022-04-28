@@ -1,19 +1,19 @@
-exec = test 
+exec = tammr.build
 sources = $(wildcard src/*.c)
 objects = $(sources:.c=.o)
 flags = -g -Wall -lm -ldl -fPIC -rdynamic
 
 $(exec): $(objects)
-	gcc $(objects) $(flags) -o $(exec)
+	gcc $(objects) $(flags) -o ./build/$(exec)
 
 %.o: %.c include/%.h
-	gcc -c $(flags) $< -o $@
+	gcc -c $(flags) $< -o ./build/$@
 
 clean:
-	-rm *.out
-	-rm *.a
-	-rm *.o
-	-rm src/*.o
+	-rm ./build/*.build
+	-rm ./build/*.a
+	-rm ./build/*.o
+	-rm ./build/src/*.o
 
 lint:
 	clang-tidy src/*.c src/include/*.h
