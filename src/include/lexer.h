@@ -2,11 +2,9 @@
 #ifndef LEXER
 #define LEXER
 
-struct lexer_struct {
+typedef struct lexer_struct {
   char* source;
   int index;
-  char curr_character;
-  
-}
-
+  char curr_character;  
+} LEXER_STRUCT;
 #endif

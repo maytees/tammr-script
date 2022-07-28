@@ -22,7 +22,9 @@ typedef enum TOKEN_TYPE {
   TT_QMARK,
   TT_EXPMARK,
   TT_USCORE,
-  TT_IDENTIFIER
+  TT_IDENTIFIER,
+  TT_AMPSAND,
+  TT_PERIOD,
 } TOKEN_TYPE;
 
 typedef struct TOKEN {

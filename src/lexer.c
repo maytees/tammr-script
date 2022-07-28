@@ -4,3 +4,7 @@
 #include <string.h>
 #include <stdio.h>
 
+char* hello() {
+  printf("yoolo");
+  return "yolo";
+}
